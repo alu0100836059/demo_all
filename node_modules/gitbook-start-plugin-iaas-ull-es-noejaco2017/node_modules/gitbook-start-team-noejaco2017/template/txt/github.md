@@ -1,0 +1,10 @@
+# Github
+
+__GitHub__ es una plataforma de desarrollo colaborativo de software para alojar proyectos utilizando el sistema de control de versiones Git. 
+El código se almacena de forma pública, aunque también se puede hacer de forma privada, creando una cuenta de pago.
+
+
+
+### Que es un issue?
+En GitHub, un __issue__ es la unidad de trabajo designada para realizar una mejora en un Sistema informático.
+Un __issue__ puede ser el arreglo de un fallo, una característica pedida, una tarea, una solicitud de Documentación en específico y todo tipo de solicitud al equipo de desarrollo. Con las __issues__ se puede asignar una tarea a un colaborador de tu repositorio o proyecto, lo cual permite una mejor organización en proyectos que se pueden realizar desde casa siempre y cuando la organización tenga su repositorio en la nube.

@@ -1,0 +1,58 @@
+{
+  "name": "  ",
+  "version": "  ",
+"description": "Creacion de un paquete npm",
+  "main": "./bin/linea-comando-npm.js",
+  "scripts": {
+    "generate-gitbook": "./scripts/losh generate-gitbook",
+    "generate-wiki": "./scripts/losh generate-wiki",
+    "build": "npm install && npm i gitbook-cli && npm run generate-gitbook && npm run generate-wiki",
+    "deploy-gitbook": "./scripts/losh deploy-gitbook",
+    "deploy-wiki": "./scripts/losh deploy-wiki",
+    "deploy": "npm run build && npm run deploy-gitbook && npm run deploy-wiki",
+    "version": "./scripts/losh version",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "bin": {
+    "linea-comando-npm": "./bin/linea-comando-npm.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "",
+    "wiki": ""
+  },
+  "keywords": [
+    "gitbook",
+    "boilerplate",
+    "starter"
+  ],
+  "author": {
+    "name": "",
+    "email": "",
+    "url": ""
+  },
+  "contributors": {
+    "name": "alu0100836059",
+    "email": "alu0100836059@ull.edu.es",
+    "url": "http://dsi1516.github.io/Practica1/"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ULL-ESIT-SYTW-1617/creacion-de-paquetes-y-modulos-en-nodejs-noejaco2017/issues"
+  },
+  "homepage": "creacion-de-paquetes-y-modulos-en-nodejs-noejaco2017/README.md",
+  "devDependencies": {
+    "async": "^1.4.0",
+    "fs-extra": "^0.22.1",
+    "gh-pages": "^0.3.1",
+    "gitbook": "^2.1.0",
+    "gitbook-cli": "^0.3.4",
+    "gulp": "^3.9.1",
+    "gulp-shell": "^0.5.2",
+    "minimist": "^1.2.0"
+  },
+  "dependencies": {
+    "ejs": "^2.5.2",
+    "underscore": "^1.8.3"
+  }
+}

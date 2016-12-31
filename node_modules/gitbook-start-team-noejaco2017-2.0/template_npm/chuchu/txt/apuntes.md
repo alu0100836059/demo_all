@@ -1,0 +1,4 @@
+# Apuntes clases teóricas
+
+La presente sección se destina a llevar un registro de los apuntes de la asignatura de 
+__Sistemas y Tecnologías Web__.
