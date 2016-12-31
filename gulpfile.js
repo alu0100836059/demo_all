@@ -33,7 +33,8 @@ gulp.task('empujar-libro',
  shell.task("git add .; git commit -am 'desplegando a github_apuntes';"+
     // "git remote add repo_apuntes_no_tocar git@github.com:alu0100836059/Apuntes_SYTW.git;"+
     // "git push repo_apuntes_no_tocar master;",
-    "git remote add origin " + paquete.repository.url + "; git remote -v;" + "git push origin master;"
+    
+    "git remote update origin " + paquete.repository.url + "; git remote -v;" + "git push origin master;"
 
     // cambiar la coma de arriba por un +  ,borrar esta línea y descomentar las de abajo
     // ";"+
