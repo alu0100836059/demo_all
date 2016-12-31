@@ -5,7 +5,7 @@ var path = require('path');
 var run = require('gulp-run');
 var cwd = process.cwd();
 var paquete = require(process.cwd()+'/package.json');
-var url = paquete.url;
+var url = paquete.repository.url;
 
 //----------- Simplificación --------------------------------------
 
