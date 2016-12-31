@@ -5,7 +5,6 @@ var path = require('path');
 var run = require('gulp-run');
 var cwd = process.cwd();
 var paquete = require(process.cwd()+'/package.json');
-var url = paquete.repository.url;
 
 //----------- Simplificación --------------------------------------
 
@@ -34,12 +33,12 @@ gulp.task('empujar-libro',
  shell.task("git add .; git commit -am 'desplegando a github_apuntes';"+
     // "git remote add repo_apuntes_no_tocar git@github.com:alu0100836059/Apuntes_SYTW.git;"+
     // "git push repo_apuntes_no_tocar master;",
-    "git remote add origin " + url + ";" + "git push origin master;",
+    "git remote add origin " + paquete.repository.url + ";" + "git push origin master;"
 
     // cambiar la coma de arriba por un +  ,borrar esta línea y descomentar las de abajo
     // ";"+
     // "git push heroku master",
-    { verbose: true }
+    // { verbose: true }
   )
 );
 
@@ -61,61 +60,6 @@ gulp.task('iaas',shell.task(['./scripts/ssh']));
 //     return run(path.join(__dirname,'scripts','ssh')).exec();
 // });
 //-----------------------------------------------------------------
-
-
-//empujar a gh-pages el directorio book
-// gulp.task('deploy-gh-pages', function() {
-//       return gulp.src('./gh-pages/*')
-//         .pipe(ghPages());
-// });
-
-
-//  "deploy-gitbook": "./scripts/losh deploy-gitbook",
-// gulp.task('deploy', deploy-gh-pages);
-
-////////////// viejo___
-// gulp.task('deploy', ['empujar'], function () {
-// return gulp.src('').pipe(shell(["./scripts/deploy-gitbook"]));
-// });
-// //  "generate-gitbook": "./scripts/generate-gitbook",
-// gulp.task('build', function() {
-//   return gulp.src(' ').pipe(shell(['./scripts/generate-gitbook']));
-// });
-//
-// // Comentado Jacobo 19.10 problema autorización ?
-// // gulp.task('deployWiki', function(){
-// //   return gulp.src('').pipe(shell(["./scripts/deploy-wiki"]));
-// // });
-//
-// gulp.task('empujar', ['build'],
-//  shell.task(
-//     "git add ."+
-//     ";"+
-//     "git commit -am 'desplegando a github'"+
-//     ";"+
-//     "git push origin master",
-//     // cambiar la coma de arriba por un +  ,borrar esta línea y descomentar las de abajo
-//     // ";"+
-//     // "git push heroku master",
-//     { verbose: true }
-//   )
-// );
-//
-
-// Comentado el 18.10 por Jacobo error en let
-// var deploygh = function() {
-//   "use strict";
-//   let gh = require('gh-pages');
-//
-//   //process.env.CMDDESC="Deploy GitBook on Github";
-//
-//   let json = require('./package.json');
-//   let REPO = json.repository.url;
-//   console.log( "Repositorio:"+REPO);
-//
-//   gh.publish('./gh-pages', { repo: REPO, logger: function(m) { console.error(m); } });
-// };
-
 
 //creacion de pdf emobi y epub
 gulp.task('creación-archivos',['pdf','mobi','epub']);
